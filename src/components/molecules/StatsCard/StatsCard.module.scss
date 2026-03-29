@@ -1,0 +1,84 @@
+.card {
+  padding: 10px 8px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  background-color: var(--white);
+
+  &.white {
+    background-color: #fff;
+    color: #1a1a1a;
+
+    .trend {
+      color: #ff553e;
+    }
+
+    .selectArrows {
+      color: #ccc;
+    }
+  }
+
+  &.blue {
+    background-color: #0078d4;
+    color: white;
+
+    .trend {
+      color: #ffdc14;
+    }
+
+    .selectArrows {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .title {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  &.orange {
+    background-color: #ff6314;
+    color: white;
+
+    .trend {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .selectArrows {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .title {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.value {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.trend {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.title {
+  font-size: 12px;
+  color: #999;
+  margin-top: 2px;
+}
+
+.selectArrows {
+  font-size: 14px;
+}

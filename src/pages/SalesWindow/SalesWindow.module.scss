@@ -1,0 +1,12 @@
+.sales {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.dateLabel {
+    font-size: 13px;
+    font-weight: 500;
+    color: #1a1a1a;
+    padding: 8px 0 0 4px;
+}

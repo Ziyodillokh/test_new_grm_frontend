@@ -1,0 +1,200 @@
+.row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    background-color: var(--white);
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+        background-color: #fafafa;
+    }
+}
+
+// Checkbox
+.checkbox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    flex-shrink: 0;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+
+        &:checked + .checkmark {
+            background-color: #007bff;
+            border-color: #007bff;
+
+            &::after {
+                display: block;
+            }
+        }
+    }
+}
+
+.checkmark {
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid #ccc;
+    border-radius: 3px;
+    transition: all 0.15s ease;
+
+    &::after {
+        content: '';
+        display: none;
+        position: relative;
+        left: 4.5px;
+        top: 1.5px;
+        width: 4px;
+        height: 8px;
+        border: solid #fff;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }
+}
+
+// Product image
+.imageCell {
+    flex-shrink: 0;
+}
+
+.productImage {
+    width: 52px;
+    height: 52px;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #f4f4f4;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+// Info
+.infoCell {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 110px;
+    flex: 1;
+}
+
+.collectionName {
+    font-size: 13px;
+    font-weight: 500;
+    color: #1a1a1a;
+    white-space: nowrap;
+}
+
+.tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    font-size: 11px;
+    color: #999;
+    white-space: nowrap;
+}
+
+// Data cells
+.cell {
+    font-size: 13px;
+    color: #1a1a1a;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.discountCell {
+    font-size: 13px;
+    color: #e74c3c;
+    font-weight: 500;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.totalCell {
+    font-size: 13px;
+    color: #47B13C;
+    font-weight: 500;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.secondPriceCell {
+    font-size: 13px;
+    color: #47B13C;
+    font-weight: 500;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+// Avatars
+.avatarsCell {
+    display: flex;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+// Actions
+.actionsCell {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+.checkBtn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.15s ease;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.moreBtn {
+    background: transparent;
+    border: none;
+    color: #ccc;
+    cursor: pointer;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+        color: #1a1a1a;
+    }
+}
+
+@media (max-width: 1024px) {
+    .row {
+        gap: 8px;
+        padding: 8px 10px;
+    }
+
+    .productImage {
+        width: 42px;
+        height: 42px;
+    }
+
+    .cell,
+    .discountCell,
+    .totalCell,
+    .secondPriceCell {
+        font-size: 12px;
+    }
+}

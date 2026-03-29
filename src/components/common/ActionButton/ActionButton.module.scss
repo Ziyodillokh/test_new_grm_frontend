@@ -1,0 +1,35 @@
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    color: #fff;
+
+    &.green {
+        background-color: #3ABC49;
+
+        &:hover {
+            background-color: #33a740;
+        }
+    }
+
+    &.orange {
+        background-color: #EC6724;
+
+        &:hover {
+            background-color: #d45c20;
+        }
+    }
+
+    svg {
+        width: 18px;
+        height: 18px;
+    }
+}

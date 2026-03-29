@@ -1,0 +1,31 @@
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    &__item {
+        position: relative;
+
+        & > a{
+            font-weight: 500;
+            font-size: 28px;
+            color: #999999;
+        }
+
+        &:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #999999;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%) translateX(20px);
+        }
+    }
+}
+
+.active{
+    color: var(--text) !important;
+}

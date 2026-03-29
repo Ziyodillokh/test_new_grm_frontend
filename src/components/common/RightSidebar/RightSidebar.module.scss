@@ -1,0 +1,308 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+// Widget base
+.widget {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+}
+
+.widgetIcon {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #f4f4f4;
+  flex-shrink: 0;
+  color: #666;
+}
+
+.widgetContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.widgetTitle {
+  font-size: 17px;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.widgetLink {
+  font-size: 13px;
+  color: #0078d4;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.widgetSub {
+  font-size: 13px;
+  color: #999;
+}
+
+// Planka
+.plankaWidget {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 20px;
+  background-color: var(--white);
+  border-radius: 8px;
+  gap: 8px;
+}
+
+.plankaHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.plankaLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.settingsBtn {
+  background: transparent;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    color: #555;
+  }
+}
+
+.plankaBody {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.plankaInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.plankaValue {
+  font-size: 32px;
+  font-weight: 500;
+  color: #1a1a1a;
+  line-height: 1.1;
+}
+
+.plankaProgress {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #169154;
+}
+
+.plankaPercent {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.plankaChart {
+  width: 180px;
+  height: 100px;
+  flex-shrink: 0;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// Excel card
+.excelCard {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px;
+  background-color: #169154;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #147a48;
+  }
+}
+
+.excelIcon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #fff;
+}
+
+.excelContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.excelTitle {
+  font-size: 17px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.excelSub {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+// Brain icon (dark circle)
+.brainIcon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 64px;
+  background-color: #1a1a1a;
+  flex-shrink: 0;
+}
+
+// Currency icon
+.currencyIcon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #fd0;
+  flex-shrink: 0;
+  color: #1a1a1a;
+}
+
+// Weather icon
+.weatherIcon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 64px;
+  background-color: var(--white);
+  flex-shrink: 0;
+}
+
+// Toggle
+.toggleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggleInput {
+  display: none;
+
+  &:checked + .toggleSwitch {
+    background-color: #47b13c;
+
+    &::after {
+      transform: translateX(10px);
+      background-color: #fff;
+    }
+  }
+}
+
+.toggleSwitch {
+  width: 25px;
+  height: 16px;
+  background-color: #fff;
+  border: 1px solid #e1e1e1;
+  border-radius: 100px;
+  position: relative;
+  transition: background-color 0.2s ease;
+  flex-shrink: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #e1e1e1;
+    transition:
+      transform 0.2s ease,
+      background-color 0.2s ease;
+  }
+}
+
+.toggleLabel {
+  font-size: 13px;
+  color: #1a1a1a;
+}
+
+// Lock row
+.lockRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 14px;
+}
+
+.lockCircle {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1000px;
+  background-color: var(--white);
+  flex-shrink: 0;
+  color: #1a1a1a;
+}
+
+.lockText {
+  font-size: 17px;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+// Tablet
+@media (max-width: 1024px) {
+  .plankaValue {
+    font-size: 24px;
+  }
+
+  .widgetTitle {
+    font-size: 14px;
+  }
+
+  .plankaChart {
+    width: 120px;
+    height: 70px;
+  }
+}

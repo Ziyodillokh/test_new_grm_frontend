@@ -1,0 +1,42 @@
+.card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--white);
+    padding: 20px 16px 20px 24px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    backdrop-filter: blur(34px);
+    cursor: pointer;
+
+    &:hover {
+        background-color: #fcfcfc;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+    }
+}
+
+.iconWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+}
+
+.title {
+    font-size: 17px;
+}
+
+.subtitle {
+    font-size: 13px;
+    color: #777777;
+}

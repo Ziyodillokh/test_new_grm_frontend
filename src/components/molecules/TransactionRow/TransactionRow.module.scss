@@ -1,0 +1,221 @@
+.wrapper {
+  background-color: var(--white);
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #fafafa;
+  }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 14px 12px 24px;
+  min-height: 72px;
+}
+
+.amountCell {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  min-width: 65px;
+}
+
+.amount {
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+  color: #1a1a1a;
+
+  &.link {
+    color: #007bff;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.subAmount {
+  font-size: 11px;
+  color: #47b13c;
+  font-weight: 500;
+}
+
+.avatarCell {
+  flex-shrink: 0;
+}
+
+.avatarWrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+.avatarBadge {
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.statusCell {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  min-width: 100px;
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.statusLabel {
+  white-space: nowrap;
+  color: #1a1a1a;
+}
+
+.dateCell {
+  font-size: 13px;
+  color: #555;
+  white-space: nowrap;
+}
+
+.collectionCell {
+  font-size: 13px;
+  color: #1a1a1a;
+  white-space: nowrap;
+  flex: 1;
+}
+
+.codeCell {
+  font-size: 13px;
+  color: #1a1a1a;
+  white-space: nowrap;
+}
+
+.sizeCell {
+  font-size: 13px;
+  color: #1a1a1a;
+  white-space: nowrap;
+}
+
+.priceCell {
+  font-size: 13px;
+  color: #1a1a1a;
+  white-space: nowrap;
+}
+
+.lengthCell {
+  font-size: 13px;
+  color: #1a1a1a;
+  white-space: nowrap;
+}
+
+.discountCell {
+  font-size: 13px;
+  color: #e74c3c;
+  font-weight: 500;
+  white-space: nowrap;
+  min-width: 44px;
+  text-align: right;
+}
+
+.actionsCell {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.expandBtn,
+.checkBtn,
+.moreBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.expandBtn {
+  color: #999;
+  &:hover {
+    color: #1a1a1a;
+  }
+}
+
+.checkBtn {
+  transition: transform 0.15s ease;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.moreBtn {
+  color: #ccc;
+  &:hover {
+    color: #1a1a1a;
+  }
+}
+
+.expandedContent {
+  padding: 0 14px 12px 103px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.commentRow {
+  font-size: 12px;
+  display: flex;
+  gap: 6px;
+}
+
+.commentLabel {
+  color: #999;
+  white-space: nowrap;
+}
+
+.commentText {
+  color: #666;
+}
+
+.tagsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  font-size: 12px;
+  color: #888;
+  white-space: nowrap;
+}
+
+@media (max-width: 1024px) {
+  .row {
+    gap: 10px;
+    padding: 10px 10px 10px 14px;
+  }
+
+  .collectionCell,
+  .codeCell,
+  .sizeCell,
+  .priceCell,
+  .lengthCell,
+  .discountCell {
+    font-size: 12px;
+  }
+}
