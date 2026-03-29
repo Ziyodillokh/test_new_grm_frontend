@@ -1,0 +1,36 @@
+name: Deploy Test OneIP Frontend
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - run: npx vite build
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to test server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          password: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            cd /home/grm/grm-newfront-repo
+            git stash
+            git pull origin main
+            npm install
+            npx vite build
+            rm -rf /home/grm/www-oneip/oneip/*
+            cp -r dist/* /home/grm/www-oneip/oneip/
+            echo "✅ OneIP frontend deployed!"
