@@ -13,6 +13,14 @@
   }
 }
 
+.rowPending {
+  background-color: #fffbeb;
+
+  &:hover {
+    background-color: #fef7dc;
+  }
+}
+
 .amount {
   font-size: 15px;
   font-weight: 500;
@@ -69,6 +77,22 @@
   color: #1a1a1a;
 }
 
+.tipCell {
+  min-width: 100px;
+  flex-shrink: 0;
+}
+
+.tipBadge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+  color: #555;
+  background-color: #f3f4f6;
+  padding: 2px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
 .dateCell {
   font-size: 13px;
   color: #555;
@@ -77,11 +101,112 @@
 
 .commentCell {
   flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 6px;
   font-size: 13px;
   color: #888;
   overflow: hidden;
+  min-width: 0;
+}
+
+.orderTag {
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 600;
+  color: #47b13c;
+  background-color: rgba(71, 177, 60, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.commentText {
+  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+// --- Status badge ---
+
+.statusBadgeCell {
+  flex-shrink: 0;
+  min-width: 110px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+
+.statusBadgeDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.statusPending {
+  color: #b45309;
+  background-color: #fef3c7;
+
+  .statusBadgeDot {
+    background-color: #f59e0b;
+  }
+}
+
+.statusApproved {
+  color: #15803d;
+  background-color: #dcfce7;
+
+  .statusBadgeDot {
+    background-color: #22c55e;
+  }
+}
+
+.statusRejected {
+  color: #b91c1c;
+  background-color: #fee2e2;
+
+  .statusBadgeDot {
+    background-color: #ef4444;
+  }
+}
+
+// --- Approve button ---
+
+.approveBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+
+  &:hover {
+    background-color: rgba(71, 177, 60, 0.1);
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.approvePlaceholder {
+  width: 30px;
+  flex-shrink: 0;
 }
 
 .moreBtn {
